@@ -10,6 +10,14 @@
 		CEBDD5B820B9D067005F38B7 /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBDD5AE20B9D067005F38B7 /* WeatherKit.framework */; };
 		CEBDD5BD20B9D067005F38B7 /* WeatherKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD5BC20B9D067005F38B7 /* WeatherKitTests.swift */; };
 		CEBDD5BF20B9D067005F38B7 /* WeatherKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBDD5B120B9D067005F38B7 /* WeatherKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEBDD5F620B9D3A4005F38B7 /* WeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD5F520B9D3A4005F38B7 /* WeatherKit.swift */; };
+		CEBDD5F820B9D3D6005F38B7 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD5F720B9D3D6005F38B7 /* Weather.swift */; };
+		CEBDD5FA20B9D47F005F38B7 /* OpenWeatherMapOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD5F920B9D47F005F38B7 /* OpenWeatherMapOperation.swift */; };
+		CEBDD5FE20B9D496005F38B7 /* OpenWeatherMapResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD5FD20B9D496005F38B7 /* OpenWeatherMapResponse.swift */; };
+		CEBDD60020B9D4A3005F38B7 /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD5FF20B9D4A3005F38B7 /* OpenWeatherMapService.swift */; };
+		CEBDD60220B9D4AE005F38B7 /* OpenWeatherMapServiceURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD60120B9D4AE005F38B7 /* OpenWeatherMapServiceURLBuilder.swift */; };
+		CEBDD60420B9D4B9005F38B7 /* OpenWeatherMapServiceURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD60320B9D4B9005F38B7 /* OpenWeatherMapServiceURLRequestBuilder.swift */; };
+		CEBDD60A20BA1EAF005F38B7 /* Weather+OpenWeatherMapResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD60920BA1EAF005F38B7 /* Weather+OpenWeatherMapResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,14 @@
 		CEBDD5B720B9D067005F38B7 /* WeatherKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBDD5BC20B9D067005F38B7 /* WeatherKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitTests.swift; sourceTree = "<group>"; };
 		CEBDD5BE20B9D067005F38B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEBDD5F520B9D3A4005F38B7 /* WeatherKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKit.swift; sourceTree = "<group>"; };
+		CEBDD5F720B9D3D6005F38B7 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		CEBDD5F920B9D47F005F38B7 /* OpenWeatherMapOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapOperation.swift; sourceTree = "<group>"; };
+		CEBDD5FD20B9D496005F38B7 /* OpenWeatherMapResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapResponse.swift; sourceTree = "<group>"; };
+		CEBDD5FF20B9D4A3005F38B7 /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
+		CEBDD60120B9D4AE005F38B7 /* OpenWeatherMapServiceURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapServiceURLBuilder.swift; sourceTree = "<group>"; };
+		CEBDD60320B9D4B9005F38B7 /* OpenWeatherMapServiceURLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapServiceURLRequestBuilder.swift; sourceTree = "<group>"; };
+		CEBDD60920BA1EAF005F38B7 /* Weather+OpenWeatherMapResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+OpenWeatherMapResponse.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +123,8 @@
 		CEBDD5ED20B9D128005F38B7 /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				CEBDD5EF20B9D141005F38B7 /* Models */,
+				CEBDD5F520B9D3A4005F38B7 /* WeatherKit.swift */,
+				CEBDD5F720B9D3D6005F38B7 /* Weather.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -115,15 +132,14 @@
 		CEBDD5EE20B9D134005F38B7 /* Private */ = {
 			isa = PBXGroup;
 			children = (
+				CEBDD5F920B9D47F005F38B7 /* OpenWeatherMapOperation.swift */,
+				CEBDD5FD20B9D496005F38B7 /* OpenWeatherMapResponse.swift */,
+				CEBDD5FF20B9D4A3005F38B7 /* OpenWeatherMapService.swift */,
+				CEBDD60120B9D4AE005F38B7 /* OpenWeatherMapServiceURLBuilder.swift */,
+				CEBDD60320B9D4B9005F38B7 /* OpenWeatherMapServiceURLRequestBuilder.swift */,
+				CEBDD60920BA1EAF005F38B7 /* Weather+OpenWeatherMapResponse.swift */,
 			);
 			path = Private;
-			sourceTree = "<group>";
-		};
-		CEBDD5EF20B9D141005F38B7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +204,7 @@
 				TargetAttributes = {
 					CEBDD5AD20B9D067005F38B7 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					CEBDD5B620B9D067005F38B7 = {
 						CreatedOnToolsVersion = 9.3;
@@ -234,6 +251,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBDD5F820B9D3D6005F38B7 /* Weather.swift in Sources */,
+				CEBDD60220B9D4AE005F38B7 /* OpenWeatherMapServiceURLBuilder.swift in Sources */,
+				CEBDD60020B9D4A3005F38B7 /* OpenWeatherMapService.swift in Sources */,
+				CEBDD60420B9D4B9005F38B7 /* OpenWeatherMapServiceURLRequestBuilder.swift in Sources */,
+				CEBDD5FE20B9D496005F38B7 /* OpenWeatherMapResponse.swift in Sources */,
+				CEBDD5F620B9D3A4005F38B7 /* WeatherKit.swift in Sources */,
+				CEBDD60A20BA1EAF005F38B7 /* Weather+OpenWeatherMapResponse.swift in Sources */,
+				CEBDD5FA20B9D47F005F38B7 /* OpenWeatherMapOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +404,7 @@
 		CEBDD5C320B9D067005F38B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -397,6 +423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davemess.WeatherKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -405,6 +432,7 @@
 		CEBDD5C420B9D067005F38B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -431,6 +459,7 @@
 		CEBDD5C620B9D067005F38B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3DZMTG4N6;
 				INFOPLIST_FILE = "WeatherKitTests/Support Files/Info.plist";
@@ -449,6 +478,7 @@
 		CEBDD5C720B9D067005F38B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3DZMTG4N6;
 				INFOPLIST_FILE = "WeatherKitTests/Support Files/Info.plist";

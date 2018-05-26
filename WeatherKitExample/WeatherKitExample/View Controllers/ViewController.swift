@@ -7,19 +7,74 @@
 //
 
 import UIKit
+import WeatherKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
+    let weatherKit = WeatherKit(apiKey: Keys.appId)
+    
+    // MARK: - view lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        getWeatherAtLocation()
+        getWeatherForCity()
+        getWeatherAtZip()
+        getWeatherByCityId()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - data
+    
+    private func getWeatherAtLocation() {
+        let location = CLLocationCoordinate2D(latitude: 30.275755, longitude: -97.739607)
+        weatherKit.getCurrentWeather(at: location, success: { (weather) in
+            if let temp = weather.temperature {
+                let formatter = MeasurementFormatter()
+                let formatted = formatter.string(from: temp)
+                print(formatted)
+            }
+        }) { (error) in
+            print(error)
+        }
     }
-
-
+    
+    private func getWeatherForCity() {
+        weatherKit.getCurrentWeather(for: "Austin", success: { (weather) in
+            if let temp = weather.temperature {
+                let formatter = MeasurementFormatter()
+                let formatted = formatter.string(from: temp)
+                print(formatted)
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
+    
+    private func getWeatherAtZip() {
+        weatherKit.getCurrentWeather(for: 78750, success: { (weather) in
+            if let temp = weather.temperature {
+                let formatter = MeasurementFormatter()
+                let formatted = formatter.string(from: temp)
+                print(formatted)
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
+    
+    private func getWeatherByCityId() {
+        weatherKit.getCurrentWeather(by: "4671654", success: { (weather) in
+            if let temp = weather.temperature {
+                let formatter = MeasurementFormatter()
+                let formatted = formatter.string(from: temp)
+                print(formatted)
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
+    
 }
 

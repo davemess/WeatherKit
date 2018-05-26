@@ -14,6 +14,7 @@
 		CEBDD5E220B9D0CF005F38B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBDD5E020B9D0CF005F38B7 /* LaunchScreen.storyboard */; };
 		CEBDD5F120B9D150005F38B7 /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBDD5F020B9D150005F38B7 /* WeatherKit.framework */; };
 		CEBDD5F220B9D150005F38B7 /* WeatherKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEBDD5F020B9D150005F38B7 /* WeatherKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEBDD60C20BA214A005F38B7 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD60B20BA2149005F38B7 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		CEBDD5E120B9D0CF005F38B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEBDD5E320B9D0CF005F38B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEBDD5F020B9D150005F38B7 /* WeatherKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WeatherKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBDD60B20BA2149005F38B7 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		CEBDD5EB20B9D107005F38B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEBDD60B20BA2149005F38B7 /* Keys.swift */,
 				CEBDD5DB20B9D0CE005F38B7 /* Main.storyboard */,
 				CEBDD5DE20B9D0CF005F38B7 /* Assets.xcassets */,
 				CEBDD5E020B9D0CF005F38B7 /* LaunchScreen.storyboard */,
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBDD5DA20B9D0CE005F38B7 /* ViewController.swift in Sources */,
+				CEBDD60C20BA214A005F38B7 /* Keys.swift in Sources */,
 				CEBDD5D820B9D0CE005F38B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
