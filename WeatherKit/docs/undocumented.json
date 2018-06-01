@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/davidmessing/Documents/Projects/Repos/misc/WeatherKit/WeatherKit/WeatherKit/Public/WeatherKit.swift",
+      "line": 18,
+      "symbol": "WeatherKitError.malformedUrl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidmessing/Documents/Projects/Repos/misc/WeatherKit/WeatherKit/WeatherKit/Public/WeatherKit.swift",
+      "line": 19,
+      "symbol": "WeatherKitError.httpError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidmessing/Documents/Projects/Repos/misc/WeatherKit/WeatherKit/WeatherKit/Public/WeatherKit.swift",
+      "line": 20,
+      "symbol": "WeatherKitError.unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/davidmessing/Documents/Projects/Repos/misc/WeatherKit/WeatherKit"
+}

@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		CE191BF920C0DEC1005715A9 /* Docs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CE191BFA20C0DEC1005715A9 /* Build configuration list for PBXAggregateTarget "Docs" */;
+			buildPhases = (
+				CE191BFD20C0DEC4005715A9 /* Jazzy */,
+			);
+			dependencies = (
+			);
+			name = Docs;
+			productName = Docs;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		CEBDD5B820B9D067005F38B7 /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBDD5AE20B9D067005F38B7 /* WeatherKit.framework */; };
 		CEBDD5BD20B9D067005F38B7 /* WeatherKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDD5BC20B9D067005F38B7 /* WeatherKitTests.swift */; };
@@ -203,6 +217,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = davemess;
 				TargetAttributes = {
+					CE191BF920C0DEC1005715A9 = {
+						CreatedOnToolsVersion = 9.3;
+					};
 					CEBDD5AD20B9D067005F38B7 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
@@ -226,6 +243,7 @@
 			targets = (
 				CEBDD5AD20B9D067005F38B7 /* WeatherKit */,
 				CEBDD5B620B9D067005F38B7 /* WeatherKitTests */,
+				CE191BF920C0DEC1005715A9 /* Docs */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +279,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		CE191BFD20C0DEC4005715A9 /* Jazzy */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Jazzy;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which jazzy >/dev/null; then\n    jazzy\nelse\n    echo \"warning: Jazzy not installed, download from https://github.com/realm/jazzy\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -299,6 +331,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CE191BFB20C0DEC1005715A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3DZMTG4N6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE191BFC20C0DEC1005715A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3DZMTG4N6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CEBDD5C020B9D067005F38B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -515,6 +565,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE191BFA20C0DEC1005715A9 /* Build configuration list for PBXAggregateTarget "Docs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE191BFB20C0DEC1005715A9 /* Debug */,
+				CE191BFC20C0DEC1005715A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CEBDD5A820B9D067005F38B7 /* Build configuration list for PBXProject "WeatherKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

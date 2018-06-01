@@ -10,13 +10,20 @@ import Foundation
 import CoreLocation
 
 /// Summary of potential errors.
+///
+/// - malformedUrl: indicates a url could not be constructed
+/// - httpError: contains the HTTP status code
+/// - unknown: an unknown error
 public enum WeatherKitError: Error {
     case malformedUrl
     case httpError(code: Int)
     case unknown
 }
 
+/// A closure which contains a Weather object.
 public typealias WeatherKitSuccess = (Weather) -> Void
+
+/// An error closure which contains an error.
 public typealias WeatherKitFailure = (Error) -> Void
 
 /// Entrypoint to the WeatherKit SDK.

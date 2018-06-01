@@ -5,15 +5,15 @@ A simple Swift library for accessing weather data in your app.
 
 ## TODO
 _Admin_
-- [ ] Document public interface
+- [x] Document public interface
 - [ ] Update readme with usage
 - [ ] Versioning
 
 _Project_
 - [ ] Unit Testing
 - [ ] Check HTTP status code
-- [ ] Swift Lint
-- [ ] Docs
+- [x] Swift Lint
+- [x] Docs
 - [ ] Badges
 
 _Features_
