@@ -18,7 +18,7 @@ enum OpenWeatherMapOperation {
 }
 
 extension OpenWeatherMapOperation {
-    
+
     init(locationCoordinate: CLLocationCoordinate2D) {
         self = .getCurrentByGeographic(lat: locationCoordinate.latitude, lon: locationCoordinate.longitude)
     }

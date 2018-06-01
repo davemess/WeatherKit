@@ -10,19 +10,19 @@ import Foundation
 
 /// Maps the raw response from the OpenWeatherMap API call.
 struct OpenWeatherMapResponse: Decodable {
-    
+
     struct Coord: Decodable {
         let lon: Double
         let lat: Double
     }
-    
+
     struct Weather: Decodable {
         let id: Int
         let main: String
         let description: String
         let icon: String
     }
-    
+
     struct Main: Decodable {
         let temp: Double?
         let pressure: Double?
@@ -32,32 +32,32 @@ struct OpenWeatherMapResponse: Decodable {
         let seaLevel: Double?
         let grndLevel: Double?
     }
-    
+
     struct Wind: Decodable {
         let speed: Double?
         let deg: Double?
     }
-    
+
     struct Clouds: Decodable {
         let all: Double?
     }
-    
+
     struct Rain: Decodable {
         enum CodingKeys: String, CodingKey {
             case threeHour = "3h"
         }
-        
+
         let threeHour: Double?
     }
-    
+
     struct Snow: Decodable {
         enum CodingKeys: String, CodingKey {
             case threeHour = "3h"
         }
-        
+
         let threeHour: Double?
     }
-    
+
     struct Sys: Decodable {
         let type: Int?
         let id: Int?
@@ -66,9 +66,9 @@ struct OpenWeatherMapResponse: Decodable {
         let sunrise: Date?
         let sunset: Date?
     }
-    
+
     // MARK: - properties
-    
+
     let coord: Coord?
     let weather: [Weather]?
     let base: String?

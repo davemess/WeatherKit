@@ -19,14 +19,13 @@ public enum WeatherKitError: Error {
 public typealias WeatherKitSuccess = (Weather) -> Void
 public typealias WeatherKitFailure = (Error) -> Void
 
-
 /// Entrypoint to the WeatherKit SDK.
 public class WeatherKit {
-    
+
     private let weatherMapService: OpenWeatherMapService
-    
+
     // MARK: - lifecycle
-    
+
     /// Designated initializer.
     ///
     /// - Parameter apiKey: an API Key assigned by OpenWeatherMap. See
@@ -37,13 +36,13 @@ public class WeatherKit {
         let weatherMapService = OpenWeatherMapService(urlRequestBuilder: urlRequestBuilder)
         self.init(weatherMapService: weatherMapService)
     }
-    
+
     private init(weatherMapService: OpenWeatherMapService) {
         self.weatherMapService = weatherMapService
     }
-    
+
     // MARK: - Current Weather
-    
+
     /// Gets current weather for the specified city.
     ///
     /// - Parameters:
@@ -55,7 +54,7 @@ public class WeatherKit {
         let operation: OpenWeatherMapOperation = .getCurrentByCityName(city: city, countryCode: country)
         perform(operation: operation, success: success, failure: failure)
     }
-    
+
     /// Gets current weather for the specified city ID.
     ///
     /// - Parameters:
@@ -66,7 +65,7 @@ public class WeatherKit {
         let operation: OpenWeatherMapOperation = .getCurrentByCityId(id: cityId)
         perform(operation: operation, success: success, failure: failure)
     }
-    
+
     /// Gets current weather at the specified location coordinate.
     ///
     /// - Parameters:
@@ -77,7 +76,7 @@ public class WeatherKit {
         let operation: OpenWeatherMapOperation = OpenWeatherMapOperation(locationCoordinate: location)
         perform(operation: operation, success: success, failure: failure)
     }
-    
+
     /// Gets current weather for the specified zip code.
     ///
     /// - Parameters:
@@ -89,9 +88,9 @@ public class WeatherKit {
         let operation: OpenWeatherMapOperation = .getCurrentByZip(zip: zip, countryCode: country)
         perform(operation: operation, success: success, failure: failure)
     }
-    
+
     // MARK: - private
-    
+
     private func perform(operation: OpenWeatherMapOperation, success: @escaping WeatherKitSuccess, failure: @escaping WeatherKitFailure) {
         weatherMapService.perform(operation: operation) { (response, error) in
             DispatchQueue.main.async {
