@@ -2,3 +2,6 @@ disabled_rules:
   - line_length
   - identifier_name
   - nesting
+  - trailing_whitespace
+excluded:
+  - WeatherKitTests

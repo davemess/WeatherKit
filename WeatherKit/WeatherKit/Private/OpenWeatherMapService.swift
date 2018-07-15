@@ -8,11 +8,16 @@
 
 import Foundation
 
+/// Defines a protocol for interacting with the OpenWeatherMap API.
+protocol OpenWeatherMapService {
+    func perform(operation: OpenWeatherMapOperation, completion: @escaping (OpenWeatherMapResponse?, Error?) -> Void)
+}
+
 /// An internal class for interacting with the OpenWeatherMap API.
-class OpenWeatherMapService {
+class OpenWeatherMapServiceImpl: OpenWeatherMapService {
 
     private let urlRequestBuilder: OpenWeatherMapServiceURLRequestBuilder
-    private let urlSession: URLSession
+    private let urlSessionTaskPerformer: URLSessionTaskPerformer
 
     private lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -24,10 +29,9 @@ class OpenWeatherMapService {
 
     // MARK: - lifecycle
 
-    init(urlRequestBuilder: OpenWeatherMapServiceURLRequestBuilder,
-         urlSession: URLSession = URLSession(configuration: .default)) {
+    init(urlRequestBuilder: OpenWeatherMapServiceURLRequestBuilder, urlSessionTaskPerformer: URLSessionTaskPerformer) {
         self.urlRequestBuilder = urlRequestBuilder
-        self.urlSession = urlSession
+        self.urlSessionTaskPerformer = urlSessionTaskPerformer
     }
 
     // MARK: - internal
@@ -37,8 +41,8 @@ class OpenWeatherMapService {
             completion(nil, WeatherKitError.malformedUrl)
             return
         }
-
-        let task = urlSession.dataTask(with: request) { (data, response, error) in
+        
+        urlSessionTaskPerformer.perform(with: request) { (data, response, error) in
             // TODO: Check http response codes
             if let error = error {
                 completion(nil, error)
@@ -49,8 +53,9 @@ class OpenWeatherMapService {
                 } catch {
                     completion(nil, error)
                 }
+            } else {
+                completion(nil, nil)
             }
         }
-        task.resume()
     }
 }

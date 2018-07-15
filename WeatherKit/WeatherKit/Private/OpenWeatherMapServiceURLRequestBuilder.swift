@@ -9,7 +9,12 @@
 import Foundation
 
 /// Constructs a url request from an OpenWeatherMapOperation.
-class OpenWeatherMapServiceURLRequestBuilder {
+protocol OpenWeatherMapServiceURLRequestBuilder {
+    func build(for operation: OpenWeatherMapOperation) -> URLRequest?
+}
+
+/// Constructs a url request from an OpenWeatherMapOperation.
+class OpenWeatherMapServiceURLRequestBuilderImpl: OpenWeatherMapServiceURLRequestBuilder {
 
     private enum HTTPMethod: String {
         case get = "GET"

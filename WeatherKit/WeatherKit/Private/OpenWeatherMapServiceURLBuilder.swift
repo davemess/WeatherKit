@@ -9,7 +9,12 @@
 import Foundation
 
 /// Constructs a url from an OpenWeatherMapOperation.
-class OpenWeatherMapServiceURLBuilder {
+protocol OpenWeatherMapServiceURLBuilder {
+    func build(for operation: OpenWeatherMapOperation) -> URL?
+}
+
+/// Constructs a url from an OpenWeatherMapOperation.
+class OpenWeatherMapServiceURLBuilderImpl: OpenWeatherMapServiceURLBuilder {
 
     private struct Constants {
         static let host = "api.openweathermap.org/data"

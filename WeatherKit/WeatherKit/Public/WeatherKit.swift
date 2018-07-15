@@ -38,13 +38,15 @@ public class WeatherKit {
     /// - Parameter apiKey: an API Key assigned by OpenWeatherMap. See
     /// https://openweathermap.org/appid
     public convenience init(apiKey: String) {
-        let urlBuilder = OpenWeatherMapServiceURLBuilder(apiKey)
-        let urlRequestBuilder = OpenWeatherMapServiceURLRequestBuilder(urlBuilder: urlBuilder)
-        let weatherMapService = OpenWeatherMapService(urlRequestBuilder: urlRequestBuilder)
+        let urlBuilder = OpenWeatherMapServiceURLBuilderImpl(apiKey)
+        let urlRequestBuilder = OpenWeatherMapServiceURLRequestBuilderImpl(urlBuilder: urlBuilder)
+        let urlSessionTaskPerformer = URLSessionTaskPerformerImpl()
+        let weatherMapService = OpenWeatherMapServiceImpl(urlRequestBuilder: urlRequestBuilder, urlSessionTaskPerformer: urlSessionTaskPerformer)
         self.init(weatherMapService: weatherMapService)
     }
 
-    private init(weatherMapService: OpenWeatherMapService) {
+    /// Internal for unit testing access.
+    init(weatherMapService: OpenWeatherMapService) {
         self.weatherMapService = weatherMapService
     }
 
