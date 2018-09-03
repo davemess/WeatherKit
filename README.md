@@ -49,8 +49,8 @@ Recommended to use [Carthage](https://github.com/Carthage/Carthage).
 ## TODO
 _Admin_
 - [x] Document public interface
-- [x ] Update readme with usage
-- [ ] Versioning
+- [x] Update readme with usage
+- [x] Versioning
 
 _Project_
 - [x] Unit Testing
